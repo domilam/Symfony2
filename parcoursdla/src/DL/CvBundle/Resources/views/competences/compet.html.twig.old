@@ -1,0 +1,241 @@
+{% extends "@DLCv/accueil.html.twig" %}
+
+{% block title %}
+    Compétences techniques - {{ parent() }}
+{% endblock %}
+
+{% block central %}
+    <div class="image col-sm-6 col-md-6">
+        <div class="textdev jumbotron" style="display:none">
+            <span class="fermeture">&times;</span>
+            <h1>Développeur Front-end et Back-end</h1>
+
+            <!--Menu accordeon Développeur Web -->
+            <div id="accordeon_web" class="panel-group col-lg-12">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a id="lienfront1" href="#acwitem1" data-parent="#accordeon_web" data-toggle="collapse">Front-End</a>
+                        </h3>
+                    </div>
+                    <div id="acwitem1" class="panel-collapse collapse ">
+                        <div class="row panel-body">
+                            <div class="col-lg-4">
+                                <img class="img_small" src={{asset("bundles/dlcv/images/html5.png")}}   alt=""></br>
+                                <img src={{asset("bundles/dlcv/images/css3.png")}} class="img_small" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                Maîtrise des langages:</br>- HTML 5</br>- CSS 3</br>- JAVASCRIPT</br>- Jquery</br>Framework CSS Bootstrap 3
+                            </div>
+                            <div class="col-lg-4">
+                                <img src={{asset("bundles/dlcv/images/javascript.png")}} class="img_small" alt="">
+                                <img src={{asset("bundles/dlcv/images/bootstrap.png")}} class="img_small" alt=""></br>
+                                <img src={{asset("bundles/dlcv/images/jquery.png")}} class="img_small" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a id="lienfront2" href="#acwitem2" data-parent="#accordeon_web" data-toggle="collapse">Back-End</a>
+                        </h3>
+                    </div>
+                    <div id="acwitem2" class="panel-collapse collapse">
+                        <div class="row panel-body">
+                            <div class="col-lg-4">
+                                <img src={{asset("bundles/dlcv/images/symfony.png")}} class="img_zoom" alt="">
+                                <img src={{asset("bundles/dlcv/images/php.png")}} class="img_zoom" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                - Framework Symfony 2<br>-Php 5 (orienté objet)<br>-MySQL
+                            </div>
+                            <div class="col-lg-4">
+                                <img src={{asset("bundles/dlcv/images/MySQL.png")}} class="img_zoom" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#acwitem3" data-parent="#accordeon_web" data-toggle="collapse">CMS</a>
+                        </h3>
+                    </div>
+                    <div id="acwitem3" class="panel-collapse collapse">
+                        <div class="panel-body">- Bonne maîtrise de WordPress</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#acwitem4" data-parent="#accordeon_web" data-toggle="collapse">Divers Outils graphiques</a>
+                        </h3>
+                    </div>
+                    <div id="acwitem4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            - Utilisation de Photoshop: création de maquettes et de bannière<br>- Logiciel de versioning- GIT et de partage de code GITHUB<br>Divers utilitaires: Crunch, CSSprettifier, EmulateurMobile, etc...
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <img src={{asset("bundles/dlcv/images/Dev.png")}} class="img_comp_tech img-rounded" alt="">
+    </div>
+
+    <div class="image col-sm-6 col-md-6">
+        <div class="textdev jumbotron" style="display:none">
+            <span class="fermeture">&times;</span>
+            <h1>Responsable projet</h1>
+
+            <!--Menu accordeon Gestion de projet -->
+            <div id="accordeon_proj" class="panel-group col-lg-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#acpitem1" data-parent="#accordeon_proj" data-toggle="collapse">Projet de création des sites FACILENET CONSULTING et MAELIA</a>
+                        </h3>
+                    </div>
+                    <div id="acpitem1" class="panel-collapse collapse ">
+                        <div class="panel-body">- Sélection des développeurs</br>- Choix des technologies</br>- Réalisation de la maquette</br>- Rédaction du contenu</br>- Mise à jour des contenus</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#acpitem2" data-parent="#accordeon_proj" data-toggle="collapse">Blog Téat'Lari</a>
+                        </h3>
+                    </div>
+                    <div id="acpitem2" class="panel-collapse collapse">
+                        <div class="panel-body">- Choix technologique</br>- Choix du design</br>- Réalisation de la maquette et du blog</br>Mise à jour du contenu</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#acpitem3" data-parent="#accordeon_proj" data-toggle="collapse">Plateforme Elearning</a>
+                        </h3>
+                    </div>
+                    <div id="acpitem3" class="panel-collapse collapse">
+                        <div class="panel-body">- Sélection et choix de la plateforme</br>- Choix et compatibilité des contenus</br>- Mise en place et formation</br>- Suivi des apprenants</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#acpitem4" data-parent="#accordeon_proj" data-toggle="collapse">Plateforme de phoning</a>
+                        </h3>
+                    </div>
+                    <div id="acpitem4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Sélection et choix du meilleur rapport qualité/prix</br>- Installation de l'applicatif</br>- Conception des écrans utilisateurs en fonction des procédures de phoning</br>- Formation des utilisateurs</br>- Suivi et mise à jour des fiches d'appel
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <img src={{asset("bundles/dlcv/images/projet.png")}} class=" img_comp_tech img-rounded" alt="">
+    </div>
+
+    <div class="image col-sm-6 col-md-6">
+        <div class="textdev jumbotron" style="display:none">
+            <span class="fermeture">&times;</span>
+            <h1>Responsable technique</h1>
+
+            <!--Menu accordeon Responsable technique -->
+            <div id="accordeon_technique" class="panel-group col-lg-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#actitem1" data-parent="#accordeon_technique" data-toggle="collapse">Concepteur de requêtes SQL (Infocentre sur Base ORACLE)</a>
+                        </h3>
+                    </div>
+                    <div id="actitem1" class="panel-collapse collapse ">
+                        <div class="panel-body">- Aide aux utilisateurs dans la création de requêtes SQL</br>- Maintenance de la base</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#actitem2" data-parent="#accordeon_technique" data-toggle="collapse">Responsable applicatifs</a>
+                        </h3>
+                    </div>
+                    <div id="actitem2" class="panel-collapse collapse">
+                        <div class="panel-body">- Maintenance de la base de phoning</br>- Conception des écrans de saisie</br>- Réalisation des requêtes de statistiques pour le suivi des chargés d'affaire</br>- Intégration de nouvelles fiches d'appel</br>- Supervision des interventions internes et externes</br>Suivi des contrats de maintenance</br>- Assistance aux utilisateurs</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#actitem3" data-parent="#accordeon_technique" data-toggle="collapse">Gestion des Achats et des ventes de pièces</a>
+                        </h3>
+                    </div>
+                    <div id="actitem3" class="panel-collapse collapse">
+                        <div class="panel-body">- Sélection des fournisseurs</br>- Approvisionnement</br>- Calcul des prix de vente</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <img src={{asset("bundles/dlcv/images/tech.png")}} class="img_comp_tech img-rounded" alt="">
+    </div>
+
+    <div class="image col-sm-6 col-md-6">
+        <div class="textdev jumbotron" style="display:none">
+            <span class="fermeture">&times;</span>
+            <h1>Formateur Expert</h1>
+
+            <!--Menu accordeon Formateur Expert -->
+            <div id="accordeon_form" class="panel-group col-lg-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#acfitem1" data-parent="#accordeon_form" data-toggle="collapse">formateur Expert sur les suites bureautiques</a>
+                        </h3>
+                    </div>
+                    <div id="acfitem1" class="panel-collapse collapse ">
+                        <div class="panel-body">- Microsoft Office: Word, Excel, Powerpoint, Access, Outlook</br>- OpenOffice: Write, Calc, Base</br></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#acfitem2" data-parent="#accordeon_form" data-toggle="collapse">Aide au développement de bases de données</a>
+                        </h3>
+                    </div>
+                    <div id="acfitem2" class="panel-collapse collapse">
+                        <div class="panel-body">- Access</br>- MySQL</br>- Windev</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="#acfitem3" data-parent="#accordeon_form" data-toggle="collapse">Conception de parcours Elearning</a>
+                        </h3>
+                    </div>
+                    <div id="acfitem3" class="panel-collapse collapse">
+                        <div class="panel-body">- Création des contenus sur MOOSTIC</br>- Conception de parcours individualisé (ENI)</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <img src={{asset("bundles/dlcv/images/formation.png")}} class="img_comp_tech img-rounded" alt="">
+    </div>
+
+{% endblock %}

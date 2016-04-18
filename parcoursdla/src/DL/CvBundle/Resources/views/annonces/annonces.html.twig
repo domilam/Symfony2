@@ -1,0 +1,26 @@
+{% extends "@DLCv/accueil.html.twig" %}
+
+{% block title %}
+    Plateforme d'annonces - {{ parent() }}
+{% endblock %}
+
+{% block central %}
+<div class="jumbotron">
+    <h1>Page en construction !</h1>
+    <p>A très bientôt</p>
+</div>
+
+{% endblock %}
+
+
+{% block javascript %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(function(){
+            window.onload=function(){
+                $('.nav').find('.current').removeClass('current');
+                $(".nav > li:nth-child(4)").addClass('current');
+            }
+        });
+    </script>
+{% endblock %}

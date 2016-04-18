@@ -1,0 +1,33 @@
+dl_cv_racine:
+    path:     /
+    defaults: { _controller: DLCvBundle:Cv:index }
+
+
+dl_cv_homepage:
+    path:     /accueil
+    defaults: { _controller: DLCvBundle:Cv:index }
+
+dl_cv_competences:
+    path: /competences
+    defaults: { _controller: DLCvBundle:Cv:compet}
+
+dl_cv_profil:
+    path: /profil
+    defaults: { _controller: DLCvBundle:Cv:profil}
+
+dl_cv_discussion:
+    path: /discussion
+    defaults: { _controller: DLCvBundle:Cv:chat}
+
+dl_cv_annonces:
+    path: /annonces
+    defaults: { _controller: DLCvBundle:Cv:advert}
+
+dl_cv_traitement:
+    path: /traiement
+    defaults: { _controller: DLCvBundle:Cv:traitement}
+
+dl_cv_write:
+    path: /write
+    defaults: { _controller: DLCvBundle:Cv:write}
+

@@ -1,0 +1,82 @@
+{% extends "@DLCv/accueil.html.twig" %}
+
+{% block title %}
+    Chatter avec vos proches - {{ parent() }}
+{% endblock %}
+
+{% block central %}
+
+    <div id="chat" class="col-sm-12">
+        <h1>MINICHAT</h1>
+        <!-- on teste la déclaration de notre cookie -->
+        {% if app.request.cookies.has('pseudoc') %}
+            <!-- sinon on récupère le cookie stocké -->
+            <h3>Bonjour {{ app.request.cookies.get('pseudoc') }} !</h3>
+            <!--on affiche la zone de chat-->
+            <div id="zaffiche">
+                {% for donnee in donnees %}
+                    <p>{{ donnee.date_fr }} - {{ donnee.pseudo}} - {{ donnee.message}}</p>
+                {% endfor %}
+            </div>
+
+            <!--        on affiche la zone de saisie des messages-->
+            <div id="formulaire">
+                <form method="POST" action={{ path('dl_cv_write') }}>
+                    <input type="text" name="message" id="message" />
+                    <input type="submit" value="ENVOYER" id="envoyer"/>
+                </form>
+
+            </div>
+
+
+        {% else %}
+
+
+            n'existe pas
+            <!--si le cookie existe pas, on affiche un formulaire permettant au visiteur de saisir son nom Modal-->
+            <div class="modal fade" data-toggle="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form action={{ path('dl_cv_traitement') }} method="post">
+                                <label for="nom">Votre nom : </label><input type = "text" name = "nom" id="nom"><br />
+                                <input type = "submit" value = "Valider">
+                            </form>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+        {% endif %}
+
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(function(){
+            window.onload=function(){
+                $('.nav').find('.current').removeClass('current');
+                $(".nav > li:nth-child(3)").addClass('current');
+                document.getElementById('zaffiche').scrollTop = document.getElementById('zaffiche').scrollHeight;
+            };
+
+            // refresh de la div d'affichage de la discussion
+            function refresh(){
+                $('#zaffiche').load(location.href+' #zaffiche>*');
+                //if ($('#zaffiche').scrollTop()==0) {
+                    document.getElementById('zaffiche').scrollTop = document.getElementById('zaffiche').scrollHeight;
+                //}
+            }
+            setInterval(refresh, 1000); // Répète la fonction toutes les 2 sec
+            // fin du refresh
+
+        });
+    </script>
+{% endblock %}

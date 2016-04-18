@@ -1,0 +1,20 @@
+{% extends "@DLCv/accueil.html.twig" %}
+
+{% block title %}
+    Profil et formation - {{ parent() }}
+{% endblock %}
+
+{% block central %}
+
+{% endblock %}
+{% block javascript %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(function(){
+            window.onload=function(){
+                $('.nav').find('.current').removeClass('current');
+                $(".nav > li:nth-child(4)").addClass('current');
+            }
+        });
+    </script>
+{% endblock %}
